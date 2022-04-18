@@ -1,0 +1,15 @@
+resources:
+- deployment/nuxt.yaml
+- deployment/strapi.yaml
+- service/strapi-service.yaml
+- service/nuxt-service.yaml
+- config/secret/strapi-secrets-sealed.yaml
+- config/strapi-config.yaml
+- config/secret/ghcr-pullsecret.sealed.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- digest: sha256:d965154fb090a62290b26e2dfe25b8fb0782404da7a100edc785e9f20428d96f
+  name: ghcr.io/excl-networks/christa-test/nuxt
+- digest: sha256:e7c52bfdf3a2b0feb10863c78a9be59650edb8b982b3b864e3ee41f21cfb7e69
+  name: ghcr.io/excl-networks/christa-test/strapi

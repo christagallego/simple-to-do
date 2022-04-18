@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: strapi-config
+  namespace: cl-christa-test
+data:
+  strapi-host: 0.0.0.0
+  strapi-port: '1337'
+  database-port: '26257'
+  database-name: client_christa-test_strapi
+  database-username: client-christa-test
+  database-host: crdb-cluster-1-public.db-crdb.svc.cluster.local
+  database-ssl: '"ssl": { "rejectUnauthorized": false }'
+  gcs-bucket-name: a-christa-test.excl.dev
+  strapi-url: https://christa-test.excl.dev/api
+  nuxt-local-strapi-url: http://strapi-service
+  nuxt-public-strapi-url: /api
+  mailgun-domain: m.exclnetworks.com
+  mailgun-host: api.mailgun.net
+  recaptcha-site-key: 6Ld-tvMZAAAAAKJKbUgjzScXym4XRqJyLngEHn9g

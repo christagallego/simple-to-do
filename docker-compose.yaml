@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    links:
+      - nuxt
+      - strapi
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  strapi:
+    build: ./strapi
+    ports:
+      - "1337:1337"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_SSL=false
+      - DATABASE_HOST=postgres
+      - DATABASE_NAME=strapi
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=development
+      - BUCKET_NAME=fake
+      - MAILGUN_API_KEY=fake
+    depends_on:
+      - postgres
+
+  nuxt:
+    build: ./nuxt
+    ports:
+      - "3005:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - strapi
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: development
+      POSTGRES_DB: strapi

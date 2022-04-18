@@ -1,0 +1,23 @@
+version: 2
+updates:
+    # Fetch and update latest `npm` packages
+    - package-ecosystem: npm
+      directory: '/nuxt'
+      schedule:
+          interval: daily
+          time: '00:00'
+      open-pull-requests-limit: 10
+      commit-message:
+          prefix: fix
+          prefix-development: chore
+          include: scope
+    - package-ecosystem: npm
+      directory: '/strapi'
+      schedule:
+        interval: daily
+        time: '00:00'
+      open-pull-requests-limit: 10
+      commit-message:
+        prefix: fix
+        prefix-development: chore
+        include: scope
