@@ -1,7 +1,11 @@
 <template>
   <div>
     <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    <div class="teses fsfe fs efsef">test</div>
+    <button @click="showAddForm = !showAddForm">Add task</button>
+    <div v-if="showAddForm">
+      <AddTask @add-task="addTask" />
+    </div>
+
     <Tasks @delete-task="deleteTask" @change-status="changeStatus" :tasks="tasks" />
     {{ tasks }}
   </div>
@@ -16,7 +20,11 @@ export default {
       tasks
     }
   },
-
+  data() {
+    return {
+      showAddForm: false
+    }
+  },
   methods: {
     async deleteTask(id) {
       try {
@@ -45,6 +53,10 @@ export default {
       await this.$strapi.find('tasks').then((res) => {
         this.tasks = res
       })
+    },
+
+    addTask(task) {
+      this.tasks = [...this.tasks, task]
     }
   }
 }
