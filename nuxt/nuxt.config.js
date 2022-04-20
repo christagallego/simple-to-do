@@ -11,19 +11,14 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@assets/style.css'
-  ],
+  css: ['@assets/style.css', '@assets/tailwind.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -31,7 +26,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxt/postcss8'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -41,7 +37,9 @@ export default {
       url: process.env.STRAPI_URL || 'http://localhost:1337'
     },
     recaptcha: {
-      siteKey: process.env.RECAPTCHA_SITE_KEY || '6LdcjdgcAAAAABjSSZBMli-5oSit3nDh4GTeeFkl' // Site key for requests
+      siteKey:
+        process.env.RECAPTCHA_SITE_KEY ||
+        '6LdcjdgcAAAAABjSSZBMli-5oSit3nDh4GTeeFkl' // Site key for requests
     },
     proxy: {
       '/api': {

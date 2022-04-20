@@ -1,6 +1,6 @@
 import { getStrapiMediaUri } from './medias'
 
-export function getMetaTags (seo) {
+export function getMetaTags(seo) {
   const tags = []
 
   if (seo.metaTitle) {
