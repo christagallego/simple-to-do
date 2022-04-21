@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="task in tasks" :key="task.id">
+    <li v-for="task in tasks" :key="task.id" class="mb-4">
       <Task @delete-task="deleteTask" @change-status="changeStatus" :task="task" />
     </li>
   </ul>

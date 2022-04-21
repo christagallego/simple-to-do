@@ -1,13 +1,15 @@
 <template>
-  <div>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    <button @click="showAddForm = !showAddForm">Add task</button>
-    <div v-if="showAddForm">
+  <div class="container py-8">
+    <div class="flex justify-between mb-8">
+      <h1 class="text-3xl font-bold underline text-violet-600">To Do</h1>
+      <button class="bg-violet-600 hover:bg-violet-500 text-white py-2 px-5" @click="showAddForm = !showAddForm">Add task</button>
+    </div>
+    <div v-if="showAddForm" class="mb-8">
       <AddTask @add-task="addTask" />
     </div>
 
     <Tasks @delete-task="deleteTask" @change-status="changeStatus" :tasks="tasks" />
-    {{ tasks }}
+
   </div>
 </template>
 
@@ -57,6 +59,7 @@ export default {
 
     addTask(task) {
       this.tasks = [...this.tasks, task]
+      this.showAddForm = false
     }
   }
 }
