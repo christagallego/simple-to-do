@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="task in tasks" :key="task.id" class="mb-4">
-      <Task @delete-task="deleteTask" @change-status="changeStatus" :task="task" />
+      <Task :task="task" @delete-task="deleteTask" @change-status="changeStatus" />
     </li>
   </ul>
 </template>
@@ -9,14 +9,19 @@
 <script>
 export default {
   props: {
-    tasks: Array
+    tasks: {
+      type: [Array],
+      default () {
+        return []
+      }
+    }
   },
 
   methods: {
-    deleteTask(id) {
+    deleteTask (id) {
       this.$emit('delete-task', id)
     },
-    changeStatus(id) {
+    changeStatus (id) {
       this.$emit('change-status', id)
     }
   }
