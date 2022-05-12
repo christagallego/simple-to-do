@@ -21,7 +21,7 @@
     "strapi-plugin-upload": "3.6.8",
     "strapi-plugin-i18n": "3.6.8",
     "strapi-connector-bookshelf": "3.6.8",
-    "strapi-provider-email-mailgun": "^3.6.6",
+    "strapi-provider-email-mailgun": "^3.6.10",
     "strapi-provider-upload-google-cloud-storage": "^3.6.8",
     "knex": "0.21.18",
     "sqlite3": "5.0.0",
