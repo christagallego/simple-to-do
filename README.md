@@ -9,3 +9,9 @@
 - `npm i` then `npm run develop`
 
 * Node: v18 | NPM: v8
+
+#### Strapi collection type required:
+Task
+- name
+- description
+- completed
