@@ -12,6 +12,6 @@
 
 #### Strapi collection type required:
 Task
-- name
-- description
-- completed
+- title - Text
+- description - Rich text
+- completed - Boolean
