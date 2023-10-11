@@ -9,12 +9,7 @@
             type="checkbox"
             class="focus:ring-violet-500 h-5 w-5 text-violet-600 border-gray-300 rounded mt-3"
             :checked="task?.attributes?.completed"
-            @change="
-              $emit('change-status', {
-                id: task.id,
-                isCompleted: task?.attributes?.completed
-              })
-            "
+            @change="handleChangeStatus"
           />
         </div>
         <div class="ml-3">
@@ -46,12 +41,20 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   task: {
     type: Object,
     required: true
   }
 })
+const emits = defineEmits(['change-status'])
 const { task } = props
+
+const handleChangeStatus = (event) => {
+  emits('change-status', {
+    id: task.id,
+    newStatus: event.target.checked
+  })
+}
 </script>
