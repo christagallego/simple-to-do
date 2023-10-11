@@ -2821,13 +2821,13 @@ bcryptjs@2.4.3:
   resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
   integrity sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==
 
-better-sqlite3@8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/better-sqlite3/-/better-sqlite3-8.5.0.tgz#b13d12d0e477be69191a39628fc8b723ee1c79d4"
-  integrity sha512-vbPcv/Hx5WYdyNg/NbcfyaBZyv9s/NVbxb7yCeC5Bq1pVocNxeL2tZmSu3Rlm4IEOTjYdGyzWQgyx0OSdORBzw==
+better-sqlite3@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/better-sqlite3/-/better-sqlite3-9.0.0.tgz#bca6026fa1e9e5af62bfef448a7d8402d4549958"
+  integrity sha512-lDxQ9qg/XuUHZG6xzrQaMHkNWl37t35/LPB/VJGV8DdScSuGFNfFSqgscXEd8UIuyk/d9wU8iaMxQa4If5Wqog==
   dependencies:
     bindings "^1.5.0"
-    prebuild-install "^7.1.0"
+    prebuild-install "^7.1.1"
 
 big-integer@^1.6.16:
   version "1.6.51"
@@ -7215,7 +7215,7 @@ postcss@^8.4.27:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-prebuild-install@^7.1.0, prebuild-install@^7.1.1:
+prebuild-install@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-7.1.1.tgz#de97d5b34a70a0c81334fd24641f2a1702352e45"
   integrity sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==
@@ -8719,9 +8719,10 @@ triple-beam@^1.3.0:
   resolved "https://registry.yarnpkg.com/triple-beam/-/triple-beam-1.4.1.tgz#6fde70271dc6e5d73ca0c3b24e2d92afb7441984"
   integrity sha512-aZbgViZrg1QNcG+LULa7nhZpJTZSLm/mXnHXnbAbjmN5aSa0y7V+wvv6+4WaBtpISJzThKy+PIPxc1Nq1EJ9mg==
 
-"ts-zen@git+https://github.com/strapi/ts-zen.git#66e02232f5997674cc7032ea3ee59d9864863732":
+"ts-zen@https://github.com/strapi/ts-zen#66e02232f5997674cc7032ea3ee59d9864863732":
   version "0.1.7"
-  resolved "git+https://github.com/strapi/ts-zen.git#66e02232f5997674cc7032ea3ee59d9864863732"
+  uid "66e02232f5997674cc7032ea3ee59d9864863732"
+  resolved "https://github.com/strapi/ts-zen#66e02232f5997674cc7032ea3ee59d9864863732"
 
 tslib@^1.10.0, tslib@^1.9.0, tslib@^1.9.3:
   version "1.14.1"
