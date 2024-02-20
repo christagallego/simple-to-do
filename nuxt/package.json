@@ -14,7 +14,7 @@
     "@nuxt/typescript-build": "^3.0.1",
     "@nuxtjs/strapi": "^1.10.1",
     "autoprefixer": "^10.4.16",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "nuxt": "^3.7.1",
     "postcss": "^8.4.33",
