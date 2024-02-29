@@ -2,11 +2,14 @@
 
 ### Setup Nuxt 3
 - change directory to nuxt: `cd nuxt`
-- `npm i` then `npm run dev`
+- NPM: `npm i` then `npm run dev`
+- Yarn: `yarn install` then `yarn dev`
 
 ### Setup Strapi 4
 - change directory to strapi: `cd strapi`
-- `npm i` then `npm run develop`
+- NPM: `npm i` then `npm run develop`
+- Yarn: `yarn install` then `yarn develop`
+- copy .env.example and rename to `.env`
 
 * Node: v18 | NPM: v8
 
