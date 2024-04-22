@@ -178,3 +178,5 @@ sw.*
 # CI/CD
 ############################
 gitops/temp/
+
+CREDS.txt
